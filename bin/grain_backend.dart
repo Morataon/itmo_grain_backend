@@ -11,9 +11,9 @@ import 'package:shelf_router/shelf_router.dart';
 void main(List<String> arguments)async {
   var sql = await MySQLConnection.createConnection(
       host: 'localhost',
-      port: 3306,
-      userName: 'root',
-      password: 'sXp2@bNQz92!Da',
+      port: 1234,
+      userName: 'admin',
+      password: 'qwerty',
       databaseName: 'grade');
   await sql.connect(timeoutMs: 99999999999);
   Router router = Router();
@@ -84,5 +84,5 @@ void main(List<String> arguments)async {
     print(response);
     return Response.ok(jsonEncode(response));
   });
-  serve(router, '192.168.1.100', 2310);
+  serve(router, '133.144.11.232', 1234);
 }
